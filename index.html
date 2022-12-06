@@ -41,7 +41,7 @@
 <script>
     var image_array = Array("https://images.metmuseum.org/CRDImages/ad/web-large/DP263972.jpg", "https://images.metmuseum.org/CRDImages/ad/web-large/123916.jpg", "https://images.metmuseum.org/CRDImages/ad/web-large/DP248061.jpg")
     var answer_array = Array("United States", "United States", "France")
-    var backend_url = 'simonkye.com/app.js'
+    var backend_url = 'app.js'
     var image_url = "https://media0.giphy.com/media/l1K9Dcy7ww0CW3JHq/giphy.gif"
     var answer = "Algeria"
 
@@ -68,6 +68,7 @@
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({username: user})
         });
+        console.log(response)
         const data = await response.json();
         new_game = data;
         image_url = new_game.image;
