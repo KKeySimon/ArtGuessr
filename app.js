@@ -144,7 +144,7 @@ function getArt(req, res) {
 }
 
 // Code for receiving get requests from frontend, making calls to API, and passing on valid info back to frontend 
-app.post("/", function (req, res) {
+app.post("*", function (req, res) {
   getArt(req, res);
 });
 
