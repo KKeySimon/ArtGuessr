@@ -148,6 +148,6 @@ app.post("*", function (req, res) {
   getArt(req, res);
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3001, function () {
   console.log("Server is listening on localhost:3000");
 });
